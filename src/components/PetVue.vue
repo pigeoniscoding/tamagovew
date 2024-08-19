@@ -4,8 +4,8 @@
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 364 476"
+    :class="$style.PetVue"
   >
-    <defs>.cls-1{fill:#fff;}.cls-2{fill:#34495e;}.cls-3{fill:#41b883;}</defs>
     <g id="Page-1">
       <g id="tamagotchi">
         <path
@@ -14,18 +14,18 @@
         />
         <polygon
           id="Path"
-          class="cls-1"
+          :class="$style.white"
           points="100.67 248.78 100.67 177.18 261.33 177.18 261.33 304.16 100.67 304.16 100.67 248.78"
         />
         <path
           id="Combined-Shape"
-          class="cls-2"
+          :class="$style.blue"
           d="M182,63c80.49,0,145.52,91.78,162.77,186h0l-30.24-14.59a7,7,0,0,0-7.2.67l-15,11.07-16-3.24v-72.7a7,7,0,0,0-7-7H94.67a7,7,0,0,0-7,7v72.7l-16,3.24-15-11.07a7,7,0,0,0-7.2-.67L19.24,248.94C36.5,154.76,101.51,63,182,63Z"
         />
         <path
           id="Combined-Shape-2"
           data-name="Combined-Shape"
-          class="cls-3"
+          :class="$style.green"
           d="M312.55,249l34.82,16.8a259.46,259.46,0,0,1,1.94,31.15C349.31,417.9,262.88,461,182,461S14.69,417.9,14.69,296.93a258.25,258.25,0,0,1,2-31.2L51.38,249h.56l13.9,10.25a7,7,0,0,0,5.55,1.22l16.28-3.29v54a7,7,0,0,0,7,7H269.33a7,7,0,0,0,7-7v-54l16.28,3.29a7,7,0,0,0,5.55-1.22L312,249Z"
         />
         <path
@@ -53,14 +53,17 @@
   </svg>
 </template>
 
-<style lang="scss">
-.cls-1 {
+<style lang="scss" module>
+.PetVue {
+  max-width: 400px;
+}
+.white {
   fill: #fff;
 }
-.cls-2 {
+.blue {
   fill: #34495e;
 }
-.cls-3 {
+.green {
   fill: #41b883;
 }
 </style>
