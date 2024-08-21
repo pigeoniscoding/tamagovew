@@ -1,11 +1,13 @@
 <script>
 // @ is an alias to /src
 import { reactive, toRefs } from "vue";
+import DinoPet from "@/components/DinoPet.vue";
 import PetVue from "@/components/PetVue.vue";
 
 export default {
   name: "HomeView",
   components: {
+    DinoPet,
     PetVue,
   },
   setup() {
@@ -31,7 +33,10 @@ export default {
 <template>
   <div class="home">
     <h1>{{ petname }}</h1>
-    <PetVue />
+    <section :class="$style.wrapper">
+      <PetVue />
+      <DinoPet :class="$style.DinoPet" v-if="petname" />
+    </section>
     <form v-if="showCreatePetForm" @submit.prevent>
       <label for="pet-name">pet name</label>
       <input type="text" id="pet-name" v-model="userinput" />
@@ -39,3 +44,15 @@ export default {
     </form>
   </div>
 </template>
+
+<style module>
+.wrapper {
+  position: relative;
+}
+.DinoPet {
+  position: absolute;
+  max-width: 120px;
+  left: 610px;
+  top: 220px;
+}
+</style>
